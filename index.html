@@ -17,5 +17,190 @@
             background-color: var(--dark-bg);
             background-image: 
                 radial-gradient(circle at 20% 30%, rgba(255, 204, 0, 0.05) 0%, transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(0, 242, 255, 0.05) 0
-                                
+                radial-gradient(circle at 80% 70%, rgba(0, 242, 255, 0.05) 0%, transparent 40%);
+            color: #fff;
+            font-family: 'Orbitron', 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Cabecera Futurista */
+        .header-container {
+            text-align: center;
+            padding: 40px 20px;
+            width: 100%;
+            max-width: 800px;
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 3px solid var(--gold);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            background: linear-gradient(to bottom, #fff 40%, var(--gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 10px var(--gold-glow));
+        }
+
+        .tagline {
+            color: var(--neon);
+            font-size: 0.8rem;
+            letter-spacing: 4px;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        /* Grid de Productos */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 25px;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 25px 15px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            backdrop-filter: blur(5px);
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: var(--gold);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4), 0 0 20px var(--gold-glow);
+        }
+
+        .icon-box {
+            font-size: 45px;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 10px var(--gold));
+        }
+
+        .amount {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .price-tag {
+            display: block;
+            color: var(--neon);
+            font-size: 1.4rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(0, 242, 255, 0.3);
+        }
+
+        /* Botón Sorprendente */
+        .order-btn {
+            background: transparent;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            padding: 12px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.8rem;
+            display: inline-block;
+            transition: 0.3s;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .order-btn:hover {
+            color: #000;
+            background: var(--gold);
+            box-shadow: 0 0 25px var(--gold);
+        }
+
+        footer {
+            margin: 60px 0 20px;
+            color: rgba(255,255,255,0.3);
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 1.8rem; letter-spacing: 4px; }
+            .grid { grid-template-columns: 1fr 1fr; gap: 15px; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="header-container">
+        <h1>FLASH GOLD</h1>
+        <div class="tagline">CENTER • SAN CARLOS • VENEZUELA</div>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <div class="icon-box">💰</div>
+            <span class="amount">105 ORO</span>
+            <span class="price-tag">Bs 616</span>
+            <a href="https://wa.me/584220256645?text=Hola, quiero 105 ORO" class="order-btn">ORDENAR</a>
+        </div>
+
+        <div class="card">
+            <div class="icon-box">💎</div>
+            <span class="amount">310 ORO</span>
+            <span class="price-tag">Bs 1.870</span>
+            <a href="https://wa.me/584220256645?text=Hola, quiero 310 ORO" class="order-btn">ORDENAR</a>
+        </div>
+
+        <div class="card">
+            <div class="icon-box">🥇</div>
+            <span class="amount">560 ORO</span>
+            <span class="price-tag">Bs 3.080</span>
+            <a href="https://wa.me/584220256645?text=Hola, quiero 560 ORO" class="order-btn">ORDENAR</a>
+        </div>
+
+        <div class="card">
+            <div class="icon-box">👑</div>
+            <span class="amount">1100 ORO</span>
+            <span class="price-tag">Bs 6.160</span>
+            <a href="https://wa.me/584220256645?text=Hola, quiero 1100 ORO" class="order-btn">ORDENAR</a>
+        </div>
+
+        <div class="card">
+            <div class="icon-box">⚡</div>
+            <span class="amount">PASE ELITE</span>
+            <span class="price-tag">Bs 2.860</span>
+            <a href="https://wa.me/584220256645?text=Hola, quiero el PASE ELITE" class="order-btn">ORDENAR</a>
+        </div>
+
+        <div class="card">
+            <div class="icon-box">🔥</div>
+            <span class="amount">PASE PREM.</span>
+            <span class="price-tag">Bs 6.380</span>
+            <a href="https://wa.me/584220256645?text=Hola, quiero el PASE PREMIUM" class="order-btn">ORDENAR</a>
+        </div>
+    </div>
+
+    <footer>Security Level: Active | 2026 Flash Gold BS</footer>
+
+</body>
+</html>
